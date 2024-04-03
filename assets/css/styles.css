@@ -1,0 +1,404 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.container {
+    width: 100%;
+}
+
+.row-news-header {
+    padding: 12px;
+}
+
+.news-header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.bg-nav {
+    background-color: var(--darkblue);
+}
+
+.news-header header {
+    width: 20%;
+    text-align: center;
+}
+
+.news-header header a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--lightgrey);
+    font-size: 2em;
+}
+
+.news-header header a:hover {
+    transition: 0.1s;
+    color: var(--red);
+}
+
+.news-header a span.highlight {
+    color: var(--red);
+}
+
+.news-header a span.highlight:hover {
+    transition: 0.1s;
+    color: var(--white);
+}
+
+button.hamburger {
+    display: none;
+}
+
+nav {
+    width: 80%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--lightgrey);
+    font-weight: 550;
+}
+
+nav ul li a:hover {
+    color: var(--red);
+}
+
+.active {
+    font-weight: bold;
+}
+
+
+/* News Thumbnail */
+
+.news-thumbnail {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.news-thumbnail article {
+    width: 60%;
+}
+
+.news-thumbnail article figure img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    ;
+}
+
+.news-thumbnail article header {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.news-thumbnail header h1 {
+    font-size: 28px;
+    text-align: justify;
+}
+
+.news-thumbnail header h1 a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.news-thumbnail header a:hover {
+    color: var(--red);
+}
+
+.news-thumbnail .author {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.news-thumbnail .author .penulis,
+.news-thumbnail .author .tanggal {
+    margin-right: 10px;
+}
+
+.news-thumbnail article header p {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.news-thumbnail article header .more {
+    text-decoration: none;
+    color: var(--red);
+}
+
+.news-thumbnail article header .more:hover {
+    color: var(--maroon);
+}
+
+.news-thumbnail aside {
+    width: 20%;
+    margin-left: 40px;
+}
+
+.news-thumbnail aside h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.news-thumbnail aside .col {
+    margin-bottom: 20px;
+}
+
+.news-thumbnail aside h3 {
+    font-size: 18px;
+}
+
+.news-thumbnail aside h3 a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.news-thumbnail aside h3 a:hover {
+    color: var(--red);
+}
+
+.news-thumbnail aside p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.news-thumbnail aside .kategori,
+.news-thumbnail aside .tanggal {
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+/* news list */
+main.news-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+main .news {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main .news article {
+    width: 45%;
+    margin-bottom: 40px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+main .news article:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+main .news article figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    ;
+}
+
+main .news article h3 {
+    margin-top: 10px;
+}
+
+main .news article h3 a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+main .news article h3 a:hover {
+    color: var(--red);
+}
+
+main .news article .author {
+    margin-top: 8px;
+    font-size: 11px;
+}
+
+main .news article .penulis,
+main .news article .tanggal {
+    margin-right: 10px;
+}
+
+main .news article p {
+    margin-top: 8px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+main aside {
+    width: 20%;
+    margin-left: 40px;
+}
+
+.top-page {
+    color: var(--darkblue);
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 880px) {
+
+    .news-header {
+        flex-direction: column;
+    }
+
+    .news-header header {
+        width: 100%;
+        text-align: left;
+    }
+
+    button.hamburger {
+        display: inline-block;
+        position: absolute;
+        top: -15;
+        right: 0;
+        transform: translateX(-20px);
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-color: var(--darkblue);
+        outline: none;
+        border: none;
+        color: var(--white);
+        font-size: 25px;
+    }
+
+    nav {
+        margin-top: 1em;
+        width: 100%;
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        padding: 0.5em 0;
+    }
+
+    nav ul li:hover {
+        background-color: var(--red);
+        border-radius: 10px;
+    }
+
+    nav ul li a:hover {
+        color: var(--white);
+    }
+
+    /* News Thumbnail */
+    .row-news-thumbnail {
+        padding: 12px;
+    }
+
+    .news-thumbnail {
+        flex-direction: column;
+        margin-top: 80px;
+    }
+
+    .news-thumbnail article {
+        width: 100%
+    }
+
+    .news-thumbnail aside {
+        width: 90%
+    }
+
+    .news-thumbnail article figure img {
+        height: 200px;
+    }
+
+    .news-thumbnail header h1 {
+        font-size: 24px;
+        text-align: left;
+    }
+
+    .news-thumbnail article header p {
+        margin-top: 20px;
+        margin-bottom: 5px;
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .news-thumbnail article header .more {
+        font-size: 14px;
+        text-decoration: none;
+        color: var(--red);
+    }
+
+    .news-thumbnail aside {
+        margin-top: 40px;
+        margin-left: 0;
+        text-align: justify;
+    }
+
+    .news-thumbnail aside h2 {
+        margin-bottom: 20px;
+    }
+
+    .news-thumbnail aside h3 {
+        font-size: 16px;
+    }
+
+    main.news-list {
+        margin-top: 0px
+    }
+
+    main.news-list,
+    main .news {
+        flex-direction: column;
+        width: 100%;
+        padding: 12px;
+    }
+
+    main .news article {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    main aside {
+        width: 100%;
+        margin-left: 0;
+        padding: 12px;
+    }
+
+
+
+}
